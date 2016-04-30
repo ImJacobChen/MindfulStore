@@ -1,0 +1,652 @@
+/************************************************************
+							INDEX
+************************************************************/
+/*****************************
+		Product Line
+******************************/
+.product-line {
+	width: 95%;
+	height: 200px;
+	margin: 20px auto;
+	background-color: white;
+
+}
+.product-line .line-title {
+	width: 95%;
+	height: 40px;
+	margin-left: 5px;
+	border-bottom: 1px solid black;
+}
+
+.product-line .line-container {
+	height: 160px;
+	width: 100%;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	display: inline-block;
+	vertical-align: top;
+}
+.product-line .products-container {
+	display: inline-block;
+	height: 160px;
+	width: 2000px;
+}
+.product-line .products-container img {
+	height: 100%;
+	width: 150px;
+	padding-left: 3px;
+	margin: 2px 0;
+}
+/*****************************
+	Product Image Slider
+******************************/
+#image-slider {
+	margin: 0 auto;
+	background-color: palegreen;
+	width: 100vw;
+	height: 54vw;
+	max-width: 100%;
+	overflow: hidden;
+	display: inline-block;
+}
+#image-slider .slides {
+	display: block;
+	width: 6000px;
+	margin: 0;
+	padding: 0;
+}
+#image-slider .slide {
+	float: left;
+	list-style-type: none;
+	width: 100vw;
+	height: 54vw;
+	max-width: 1500px;
+}
+#image-slider .slide img {
+	width: 100%;
+	height: 100%;
+}
+#image-slider .sliderdots {
+	width: auto;
+	height: 20px;
+	position: relative;
+	bottom: 20px;
+	text-align: center;
+}
+#image-slider .sliderdot {
+	width: 15px;
+	height: 15px;
+	background-color: white;
+	display: inline-block;
+	border-radius: 15px;
+	opacity: 0.3;
+	cursor: pointer;
+	margin-left: 10px;
+	-webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+#image-slider .activedot {
+	width: 15px;
+	height: 15px;
+	background-color: white;
+	display: inline-block;
+	border-radius: 15px;
+	opacity: 1;
+	cursor: pointer;
+	margin-left: 10px;
+	-webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+#image-slider .hidden_dot {
+	display: none;
+}
+}
+#image-slider .sliderdot:hover {
+	opacity: 0.8;
+}
+/*****************************
+		Social Box
+******************************/
+.social-box {
+	margin: 20px 0;
+	width: 100%;
+	text-align: center;
+}
+.social-box h1 {
+}
+/*****************************
+			Footer
+******************************/
+#footer {
+	width: 100%;
+	height: 40px;
+	background-color: #e9eaed; 
+}
+/************************************************************
+						PRODUCTS
+************************************************************/
+/*****************************
+			Main
+******************************/
+.main {
+	width: 100%;
+}
+
+.main .sort-buttons {
+	margin-top: 30px;
+	text-align: center;
+	margin-bottom: 3px;
+}
+.main #refine-button,
+.main .sort-button {
+	width: 48%;
+	height: 50px;
+	display: inline-block;
+	text-align: left;
+	line-height: 50px;
+	color: white;
+}
+.main #refine-button p, 
+.main .sort-button p {
+	margin-left: 4px;
+	font-size: 18px;
+	display: inline-block;
+}
+.main #refine-button {
+	background-color: seagreen;
+}
+.main #refine-button img {
+	display: inline-block;
+	height: 11px;
+	width: 11px;
+	margin-left: 8px;
+	transition: 0.5s;
+}
+.main .sort-button {
+	background-color: coral;
+}
+.main .sort-button form {
+	display: inline-block;
+	border: none;
+	width: 45%;
+	color: white;
+}
+.main .sort-button select {
+	background-color: coral;
+	border: none;
+	width: 100%;
+	height: 90%;
+	color: white;
+}
+.main #refine-items {
+	display: none;
+}
+.main #refine-items h3 {
+	padding-left: 3px;
+	background-color: lightgrey;
+	padding: 5px 0;
+}
+.main #price-form {
+	margin: 5px 0;
+}
+.main #price-form:first-child {
+	border-bottom: 1px solid lightgrey;
+}
+.main #price-form div {
+	display: inline-block;
+	width: 45%;
+	vertical-align: top;
+}
+.main #price-form input {
+	height: 30px;
+	vertical-align: middle;
+}
+.main #min-price,
+.main #max-price {
+	width: 50px;
+	margin-bottom: 5px;
+}
+.main #min-price-range,
+.main #max-price-range {
+	width: 100%;
+}
+.main #price-form p {
+	color: red;
+}
+.main #refine-type-list {
+	margin: 0 auto;
+	width: 100%;
+}
+.main #refine-type-item {
+	width: 100%;
+	height: 40px;
+	border-bottom: 1px solid grey;
+	padding-left: 3px;
+	line-height: 40px;
+	list-style: none;
+}
+.main .refine-submit {
+	display: block;
+	margin: 10px auto 0 auto;
+	background-color: seagreen;
+	width: 95%;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	color: white;
+	border: none;
+}
+.main .selected {
+	background-color: seagreen;
+	color: white;
+}
+
+.main #list {
+	margin: 10px auto;
+	text-align: center;
+	width: 100%;
+}
+.main #list a {
+	text-decoration: none;
+	color: black;
+	text-align: left;
+	margin: 0 auto;
+	width: 90%;
+}
+.main .list-item {
+	list-style: none;
+	width: 90%;
+	display: inline-block;
+	margin-left: 5px;
+	margin-bottom: 20px;
+}
+.main img {
+	width: 100%;
+	margin-bottom: 1px;
+}
+.main .item-info {
+	display: block;
+	outline: 1px solid red;
+	height: 40px;
+	width: 90%;
+	margin: 0 auto;
+}
+.main .item-title {
+	display: block;
+}
+.main .item-price {
+	display: block;
+	color: grey;
+}
+/*****************************
+			Footer
+******************************/
+#footer {
+	width: 100%;
+	height: 100px;
+	background-color: #e9eaed;
+}
+/************************************************************
+						PRODUCT
+************************************************************/
+.name-and-price {
+	width: 100%;
+	padding: 3px 0 3px 20px;
+}
+.name-and-price h3 {
+}
+.name-and-price h4 {
+	color: grey;
+}
+.product-image {
+	margin: 0 auto;
+	width: 95%;
+}
+.product-image img {
+	width: 100%;
+}
+#product-form {
+	text-align: center;
+	width: 95%;
+	margin: 0 auto;
+}
+.attribute-box {
+	height: 40px;
+	width: 48.4%;
+	line-height: 40px;
+	text-align: left;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 6px 0 3px 0;
+	padding-left: 3px;
+}
+.attribute-box-left {
+	background-color: lightgrey;
+}
+.attribute-box-right {
+	background-color: lightblue;
+}
+.product-quantity {
+	background-color: lightgrey;
+	border: none;
+}
+#add-to-basket {
+	width: 100%;
+	background-color: seagreen;
+	text-align: center;
+	line-height: 45px;
+	color: white;
+	border: none;
+	margin: 3px 0 6px 0;
+	font-weight: bold;
+}
+#accordion h3 {
+	width: 100%;
+	height: 50px;
+	background-color: lightgrey;
+	border-top: 1px solid grey;
+	line-height: 50px;
+	padding-left: 10px;
+}
+#accordion .description {
+	padding: 3px 0 3px 5px;
+}
+.back-to-products {
+	margin-left: 3px;
+	margin-bottom: 5px;
+	text-decoration: none;
+	color: black;
+}
+.back-to-products img,
+.back-to-products p {
+	display: inline-block;
+	vertical-align: top;
+}
+/************************************************************
+						CONTACT
+************************************************************/
+#contact-form form {
+	padding: 10px 20px;
+}
+#contact-form fieldset {
+	padding: 8px;
+}
+#contact-form .form-name,
+#contact-form .form-email,
+#contact-form textarea {
+	width: 100%;
+	border-radius: 3px;
+	border: 1px solid grey;
+	background-color: #e9eaed;
+	transition: 0.5s;
+	padding: 2px;
+}
+#contact-form .form-name:focus,
+#contact-form .form-email:focus,
+#contact-form textarea:focus {
+	background-color: white;
+	outline: none;
+}
+
+#contact-form .form-name,
+#contact-form .form-email {
+	height: 30px;
+}
+#contact-form textarea {
+	height: 120px;
+}
+
+#contact-form .form-submit {
+	width: 100%;
+	height: 34px;
+	background-color: seagreen;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+#contact-form p {
+	text-align: center;
+}
+.error-message {
+	text-align: center;
+	color: red;
+	background-color: yellow;
+	border: 1px solid red;
+	width: 90%;
+	margin: 0 auto;
+}
+.goonybot {
+	display: none;
+}
+/************************************************************
+						SEARCH
+************************************************************/
+.search-results {}
+.search-results a {
+	text-decoration: none;
+	color: black;
+}
+.search-results .list-item {
+	height: 200px;
+	width: 100%;
+}
+.search-results .list-item img {
+	height: 200px;
+	width: 30%;
+	display: inline-block;
+}
+.search-results .list-item div {
+	height: 100%;
+	width: 65%;
+	padding-left: 5px;
+	display: inline-block;
+	vertical-align: top;
+}
+.search-results .item-price {
+	color: grey;
+}
+/***********************************************************
+						BASKET
+***********************************************************/
+.main {
+	width: 100%;
+	background-color: #e9eaed;
+}
+#basket-subtotal {
+	margin: 20px 0;
+	width: 100%;
+	text-align: right;
+}
+.checkout-button {
+	width: 100%;
+	height: 50px;
+	display: block;
+	background-color: seagreen;
+	line-height: 50px;
+	color: white;
+	border: none;
+	vertical-align: middle;
+	margin: 0 auto 10px auto;
+	text-decoration: none;
+}	
+#basket {
+	width: 100%;
+}
+.basket-item {
+	width: 100%;
+	height: 150px;
+	border-bottom: 1px solid lightgrey;
+	margin-bottom: 5px;
+	list-style-type: none;
+}
+.basket-item img {
+	width: 30%;
+	height: 100%;
+	display: inline-block;
+}
+.basket-price {
+	color: grey;
+}
+.basket-item div {
+	width: 65%;
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 5px;
+}
+.basket-item div span {
+	display: block;
+}
+.basket-qty {
+	width: 40px;
+	height: 25px;
+	border: none;
+	border-radius: 3px;
+	text-align: center;
+	margin-right: 5px;
+}
+#basket-delete {
+	height: 25px;
+	text-align: center;
+}
+.basket-edit {
+	display: inline-block;
+	width: 60%;
+}
+
+/***********************************************************
+						SIGNIN
+***********************************************************/
+.signin-main {
+	width: 95%;
+	margin: 0 auto;
+}
+.sign-in form {
+	margin: 0 auto;
+	padding-top: 5px;
+	margin: 3px 0 10px 0;
+	text-align: center;
+}
+.sign-in .signin-email {
+	width: 255px;
+}
+.sign-in .signin-password {
+	width: 200px;
+}
+.sign-in .signin-email,
+.sign-in .signin-password {
+	height: 30px;
+	border-radius: 3px;
+	border: 1px solid lightgrey;
+	margin: 1px 0;
+	font-size: 18px;
+}
+.sign-in .signin-submit {
+	width: 100%;
+	height: 30px;
+	border: none;
+	border-radius: 2px;
+	background-color: seagreen;
+	color: white;
+	display: block;
+	margin: 10px auto 0 auto;
+}
+.signin-main p {
+	text-align: center;
+}
+.unfilled {
+	border: 2px solid red;
+}
+.error-holder {
+	color: darkred;
+}
+.delivery-form-button {
+	width: 100%;
+	height: 45px;
+	background-color: seagreen;
+	color: white;
+	border: none;
+}
+.billing-address-form {
+	display: none;
+}
+
+/***********************************************************
+						REGISTER
+***********************************************************/
+.register {
+	width: 100%;
+	max-width: 550px;
+	border-radius: 3px;
+	margin: 10px auto;
+}
+.register-form {
+	margin: 0 auto;
+}
+.register-form fieldset {
+	display: block;
+	margin: 0 auto;
+	padding: 20px 10px;
+}
+.register-form .register-title {
+	color: seagreen;
+	text-align: center;
+	font-weight: bold;
+	margin: 0 auto;
+}
+.register-form .input-label {
+	font-weight: bold;
+}
+.register-form table {
+	border-spacing: 5px;
+	margin: 0 auto;
+}
+.register-form .register-submit {
+	margin-top: 10px;
+	width: 100%;
+	height: 25px;
+	border: none;
+	border-radius: 3px;
+	background-color: seagreen;
+	color: white;
+}
+.register-form .form-error {
+	border: 2px solid #E1715B;
+}
+.error-holder {
+	color: #E1715B;
+	font-weight: bold;
+	text-align: center;
+}
+
+/***********************************************************
+						CHECKOUT
+***********************************************************/
+.checkout-progress {
+	height: 60px;
+	width: 100%;
+	padding-top: 2px;
+}
+.checkout-progress ul {
+	height: 40px;
+	width: 100%;
+	text-align: center;
+}
+.checkout-progress li {
+	height: 100%:;
+	display: inline-block;
+	margin: 0 10px;
+}
+.checkout-progress li img {
+	height: 100%;
+}
+.checkout-progress .checkout-in-progress {
+	border: 2px solid #3399ff;
+}
+.checkout-progress .checkout-complete {
+	background-color: #00cc66;
+	border: 2px solid #00cc66;
+}

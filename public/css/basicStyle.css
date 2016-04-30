@@ -1,0 +1,282 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Quicksand', sans-serif;
+}
+body {
+  	background-color: #e9eaed;
+}
+.button {
+	background-color: seagreen;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	padding: 8px 5px;
+}
+#errors {
+	width: 95%;
+	background-color: #cb4335;
+	color: white;
+	margin: 0 auto;
+	border-radius: 5px;
+	padding: 10px;
+}
+#errors ul {
+	list-style-type: disc;
+}
+/*****************************
+			Wrapper
+******************************/
+#wrapper {
+	background-color: #e9eaed;
+	margin: 0 auto;
+	max-width: 1500px;
+}
+
+/*****************************
+			Header
+******************************/
+#header {
+	height: 80px;
+	width: 100%;
+}
+#header img {
+	width: 100%;
+	height: 100%;
+}
+#header .header-image-large {
+	display: none;
+}
+
+/*****************************
+		User Panel
+******************************/
+#user-panel {
+	width: 100%;
+	vertical-align: top;
+	border-bottom: 1px solid lightgrey;
+	padding: 1px 0;
+	text-decoration: bold;
+}
+#user-panel a {
+	display: inline-block;
+	color: grey;
+	text-decoration: none;
+}
+#user-panel a:hover {
+	color: grey;
+}
+#user-panel #shopping-cart-icon {
+	display: inline-block;
+	width: auto;
+	height: 20px;
+	vertical-align: top;
+	float: right;
+	cursor: pointer;
+}
+#user-panel #shopping-cart-icon:hover {
+	color: grey;
+}
+#user-panel #shopping-cart-icon img {
+	height: 20px;
+	display: inline-block;
+}
+#user-panel #shopping-cart-icon p {
+	display: inline-block;
+	vertical-align: top;
+}
+#user-panel .user-icon {
+	height: 20px;
+	vertical-align: top;
+}
+#login-panel {
+	width: 100%;
+	border-bottom: 1px solid lightgrey;
+	text-align: center;
+	padding-bottom: 5px;
+	display: none;
+}
+#login-panel form {
+	margin: 0 auto;
+	padding-top: 5px;
+	margin: 3px 0 10px 0;
+}
+#login-panel input {
+	width: 200px;
+	height: 30px;
+	border-radius: 3px;
+	border: 1px solid lightgrey;
+	margin: 1px 0;
+	font-size: 18px;
+}
+/*****************************
+		TitleBar
+******************************/
+#titleBar {
+	height: 42px;
+	width: 100%;
+	background-color: #e9eaed;
+	border-bottom: 1px solid lightgrey;
+	display: flex;
+}
+#titleBar-menuButtonDiv,
+.titleBar-searchButtonDiv,
+.titleBar-title {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#titleBar .titleBar-title {
+	color: grey;
+	font-size: 28px;
+	text-align: center;
+	flex-grow: 1;
+}
+#titleBar .titleBar-searchButtonDiv,
+#titleBar #titleBar-menuButtonDiv {
+	height: 32.5px;
+	width: 32.5px;
+	margin: 4px 5px;
+}
+#titleBar #titleBar-menuButtonDiv {
+	position: relative;
+}
+
+/* Menu Button Animation */
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  bottom: 14px;	
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: grey;
+  position: absolute;
+  display: block;
+  content: '';
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px; 
+}
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  transition: all 500ms ease-in-out;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+/*****************************
+			Menu
+******************************/
+#menu {
+	height: 50px;
+	width: 100%;
+	clear: both;
+	display: none;
+}
+#menu ul {
+	width: 100%;
+	height: 100%;
+}
+#menu ul li {
+	width: 25%;
+	height: 50px;
+	float: left;
+	background-color: white;
+	color: black;
+	display: inline-block;
+	text-align: center;
+	line-height: 50px;
+	transition: 0.5s;
+}
+#menu .menu-search {
+	width: 100%;
+
+}
+#menu a {
+	text-decoration: none;
+}
+#menu ul li:hover {
+	background-color: lightgrey;
+}
+/*****************************
+		Search Box
+******************************/
+.search-box {
+	width: 100%;
+	height: 30px;
+	margin: 0 auto 15px auto;
+	text-align: center;
+	display: none;
+}
+.search-box form {
+	width: 100%;
+	height: 35px;
+	border-bottom: 1px solid lightgrey;
+}
+.search-box input {
+	display: inline-block;
+	margin: 0 auto;
+	float: left;
+	transition: 0.5s;
+}
+.search-box .search-bar {
+	height: 35px;
+	width: 85%;
+	background-color: #e9eaed;
+	border: 0.5px solid #e9eaed;
+	padding-left: 3px;
+}
+.search-box .search-submit {
+	height: 35px;
+	width: 15%;
+	background-color: #e9eaed;
+	border: none;
+	padding-left: 5px;
+	background-image: url(../images/search.png);
+	background-repeat: no-repeat;
+	background-position: center; 
+	cursor: pointer;
+}
+.search-box form:hover > .search-submit,
+.search-bar:focus + .search-submit {
+	background-color: lightgrey;
+}
+.search-bar:focus {
+	background-color: white;
+	border: none;
+	outline: none;
+}
+/*****************************
+			Footer
+******************************/
+#footer {
+	position: relative;
+	border-top: 3px solid lightgrey;
+}
+#footer p {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+/**********************************
+		   Media Queries
+**********************************/
+@media only screen and (min-width: 768px) {
+	#header .header-image {
+		display: none;
+	}
+	#header .header-image-large {
+		display: block;
+	}
+}
