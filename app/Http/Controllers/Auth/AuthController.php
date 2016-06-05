@@ -74,7 +74,7 @@ class AuthController extends Controller
         Auth::user()->syncCarts();
     }
 
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     protected $loginPath = '/auth/signin';
 }
