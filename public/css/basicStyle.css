@@ -1,10 +1,9 @@
 * {
 	margin: 0;
 	padding: 0;
-	font-family: 'Quicksand', sans-serif;
 }
 body {
-  	background-color: #e9eaed;
+  	background-color: #e9eaed !important;
 }
 .button {
 	background-color: seagreen;
