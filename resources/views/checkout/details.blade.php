@@ -13,7 +13,7 @@
 		        </ul>
 		    </div>
 		@endif
-		<form>
+		<form method="POST" action="{{ route('checkout.order') }}">
 			<!-- Your Details -->
 			<div id="checkout-yourDetails">
 				<h2>Your Details</h2>
@@ -46,7 +46,7 @@
 			    <label for="name">City</label>
 			    <input type="text" name="city" class="u-full-width" placeholder="City" />
 
-			    <label for="postalCode">Postal code</label>
+			    <label for="postalCode">Postal Code</label>
 			    <input type="text" name="postalCode" class="u-full-width" placeholder="Postal Code" />
 			
 			    <label for="country">Country</label>
@@ -62,42 +62,51 @@
 				<div>
 					<h4>Order Summary</h4>
 					<table class="u-full-width">
-					<tr>
-						<th>Your Items</th>
-						<th>Specifics</th>
-						<th>Price</th>
-					</tr>
-					@foreach ($userCartItems as $cartItem)
-						<tr>
-							<td>{!! Html::image($cartItem->product->img, 'zen image') !!}</td>
-							<td>
-								{{ $cartItem->name }}
-								<br>
-								Quantity: {{ $cartItem->qty }}
-							</td>
-							<td>£{{ $cartItem->price }}</td>
-						</tr>
-					@endforeach
-						<tr>
-							<th></th>
-							<th></th>
-							<th></th>
-						</tr>
-						<tr>
-							<th>Subtotal:</th>
-							<th></th>
-							<th>£{{ $cartTotal }}</th>
-						</tr>
-						<tr>
-							<th>Delivery Price</th>
-							<th></th>
-							<th>£1.99</th>
-						</tr>
-						<tr>
-							<th>Total</th>
-							<th></th>
-							<th>£{{ $cartTotal }}</th>
-						</tr>
+						<thead>
+							<tr>
+								<th>Your Items</th>
+								<th>Specifics</th>
+								<th>Price</th>
+							</tr>
+						</thead>
+						<tbody>
+						@foreach ($userCartItems as $cartItem)
+							<tr>
+								<td>{!! Html::image($cartItem->product->img, 'product image', ["class" => "checkout-payment-productImage"]) !!}</td>
+								<td>
+									{{ $cartItem->name }}
+									<br>
+									Quantity: {{ $cartItem->qty }}
+								</td>
+								<td>£{{ $cartItem->price }}</td>
+							</tr>
+						@endforeach
+							<tr>
+								<th></th>
+								<th></th>
+								<th></th>
+							</tr>
+							<tr>
+								<th>Subtotal:</th>
+								<th></th>
+								<th>£{{ $cartTotal }}</th>
+							</tr>
+							<tr>
+								<th>Delivery</th>
+								<th></th>
+								<th>
+									<select name="delivery" id="deliverySelectInput">
+										<option value="standard">Standard Delivery 3-5 Working Days - £1.99</option>
+										<option value="express">Express Delivery 1-2 Working Days - £4.99</option>
+									</select>
+								</th>
+							</tr>
+							<tr>
+								<th>Total</th>
+								<th></th>
+								<th>£{{ $cartTotal }}</th>
+							</tr>
+						</tbody>
 					</table>
 				</div>
 
@@ -110,6 +119,7 @@
 			</div>
 			<!-- End Payment -->
 
+			{{ csrf_field() }}
 			<input id="checkout-placeOrderButton" class="u-full-width" type="submit" value="Place Order">
 		</form>
 	</div>
@@ -212,11 +222,6 @@
 		}).success(function (data) {
 			braintree.setup(data.token, 'dropin', {
 				container: 'dropin-container',
-				paypal: {
-				    button: {
-				      type: 'checkout'
-				    }
-				}
 			});
 		});
 	</script>

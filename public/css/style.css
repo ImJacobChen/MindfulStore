@@ -560,12 +560,19 @@
 	padding: 10px;
 	background-color: white;
 }
+.checkout-payment-productImage {
+	width: 150px;
+	height: 150px;
+}
 #checkout-placeOrderButton {
 	background-color: #009CDE;
 	color: white;
 	font-size: 14px;
 	margin-top: 15px;
 	height: 50px;
+}
+#deliverySelectInput {
+	width: 100%;
 }
 /************************************
 		  CHECKOUT/REVIEW

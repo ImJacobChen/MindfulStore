@@ -38,13 +38,8 @@ Route::get('search', 'SearchController@search');
 Route::get('account', 'AccountController@index');
 
 //Checkout routes...
-Route::get('checkout/details', 'CheckoutController@index');
-Route::post('checkout/review', 'CheckoutController@review');
-Route::get('checkout/paypalReview', 'CheckoutController@paypalReview');
-Route::get('checkout/confirmation', 'CheckoutController@confirmation');
-
-Route::post('checkout/paypal-checkout', 'CheckoutController@setExpressCheckout');
-Route::post('checkout/place-order', 'CheckoutController@placeOrder');
+Route::get('checkout', 'CheckoutController@index');
+Route::post('checkout/order', 'CheckoutController@order')->name('checkout.order');
 
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');
