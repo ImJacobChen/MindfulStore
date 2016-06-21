@@ -13,32 +13,40 @@
 			@endif
 		<div id="signupLogin-loginContainer">
 			<h2>Have an account?</h2>
-			{!! Form::open(['url' => '/auth/login', 'class' => 'z-depth-1']) !!}
-					{!! Form::label('email', 'What is your email address?') !!}
-					{!! Form::email('email', null, ['class' => '']) !!}
-					<br>
-					{!! Form::label('password', 'Password:') !!}
-					{!! Form::password('password', null, ['class' => '']) !!}
-					<br>
-					<button id='signupLogin-signupButton' class="btn waves-effect waves-light blue accent-2" type="submit">Sign In</button>
+			<hr>
+			{!! Form::open(['url' => '/auth/login']) !!}
+				<label for="email">What is your email address?</label>
+				<input type="email" name="email" class="u-full-width"></input>
+
+				<br>
+				<label for="password">Password:</label>
+				<input type="password" name="password" class="u-full-width"></input>
+
+				<br>
+				<input type="submit" value="Log In" class="u-full-width">
 			{!! Form::close() !!}
+			
 		</div>
 		<div id="signupLogin-signupContainer">
 			<h2>Create an account.</h2>
-			{!! Form::open(['url' => '/auth/register', 'class' => 'z-depth-1']) !!}
-					{!! Form::label('name', 'What is your name?') !!}
-					{!! Form::text('name', null, ['class' => '']) !!}
+			<hr>
+			<form>
+
+			</form>
+			{!! Form::open(['url' => '/auth/register']) !!}
+					<label for="name">What is your name?</label>
+					<input type="text" name="name" class="u-full-width"></input>
 					<br>
-					{!! Form::label('email', 'What is your email address?') !!}
-					{!! Form::email('email', null, ['class' => '']) !!}
+					<label for="email">What is your email address?</label>
+					<input type="email" name="email" class="u-full-width"></input>
 					<br>
-					{!! Form::label('password', 'Password:') !!}
-					{!! Form::password('password', null, ['class' => '']) !!}
+					<label for="password">Password:</label>
+					<input type="password" name="password" class="u-full-width"></input>
 					<br>
-					{!! Form::label('password_confirmation', 'Confirm Password:') !!}
-					{!! Form::password('password_confirmation', null, ['class' => '']) !!}
+					<label for="password_confirmation">Confirm password:</label>
+					<input type="password" name="password_confirmation" class="u-full-width"></input>
 					<br>
-					<button id='signupLogin-loginButton' class="btn waves-effect waves-light green" type="submit">Create Account</button>
+					<button id='signupLogin-loginButton' type="submit">Create Account</button>
 			{!! Form::close() !!}
 		</div>
 	</div>

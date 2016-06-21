@@ -50,6 +50,14 @@ class User extends Model implements AuthenticatableContract,
     }
 
     /**
+     * 
+     */
+    public function orders() 
+    {
+        return $this->hasMany('App\Order');
+    }
+
+    /**
      * [syncCarts description]
      * @return [type] [description]
      */

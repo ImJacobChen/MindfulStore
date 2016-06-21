@@ -17,9 +17,11 @@ class AccountController extends Controller
      */
     public function index()
     {
-        if (Auth::check()) {
+        if (Auth::check()) 
+        {
             return view('account.account');
-        } else {
+        } else 
+        {
             return view('auth.signin');
         }
     }

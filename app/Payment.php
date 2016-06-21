@@ -9,5 +9,5 @@ class Payment extends Model
     protected $fillable = [
     	'failed',
     	'transaction_id'
-    ]
+    ];
 }

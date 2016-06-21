@@ -37,17 +37,17 @@
 
 				<hr>
 
-				<label for="addressLine1">Address line 1</label>
-			    <input type="text" name="addressLine1" class="u-full-width" placeholder="Address Line 1" />
+				<label for="address1">Address line 1</label>
+			    <input type="text" name="address1" class="u-full-width" placeholder="Address Line 1" />
 
-			    <label for="addressLine2">Address line 2</label>
-			    <input type="text" name="addressLine2" class="u-full-width" placeholder="Address Line 2" />
+			    <label for="address2">Address line 2</label>
+			    <input type="text" name="address2" class="u-full-width" placeholder="Address Line 2" />
 			
 			    <label for="name">City</label>
 			    <input type="text" name="city" class="u-full-width" placeholder="City" />
 
-			    <label for="postalCode">Postal Code</label>
-			    <input type="text" name="postalCode" class="u-full-width" placeholder="Postal Code" />
+			    <label for="postal_code">Postal Code</label>
+			    <input type="text" name="postal_code" class="u-full-width" placeholder="Postal Code" />
 			
 			    <label for="country">Country</label>
 			    <input type="text" name="country" class="u-full-width" placeholder="Country" />
@@ -123,7 +123,7 @@
 			<input id="checkout-placeOrderButton" class="u-full-width" type="submit" value="Place Order">
 		</form>
 	</div>
-	<!-- End Checkout Details -->
+	<!-- End Checkout -->
 
 
 	<!-- !! Javascript Form Validation !! -->

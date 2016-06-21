@@ -11,7 +11,6 @@
 	<!--Import Google Icon Font-->
 	<!--link href='https://fonts.googleapis.com/css?family=Quicksand|Material+Icons' rel='stylesheet' type='text/css'-->
 	<script src="{{ asset('js/jquery-2.2.3.min.js') }}"></script>
-	<script src="{{ asset('js/concise.min.js') }}"></script>
 </head>
 <body>
 	<div id="user-panel">

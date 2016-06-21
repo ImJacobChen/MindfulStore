@@ -551,8 +551,8 @@
 						CHECKOUT
 ***********************************************************/
 #checkout {
-	max-width: 960px;
 	padding: 20px;
+	margin: 0 auto;
 }
 #checkout-payment {
 	border: 1px solid white;
