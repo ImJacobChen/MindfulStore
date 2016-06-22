@@ -1,10 +1,9 @@
 * {
 	margin: 0;
 	padding: 0;
-	font-family: 'Quicksand', sans-serif;
 }
 body {
-  	background-color: #e9eaed;
+  	background-color: #e9eaed !important;
 }
 .button {
 	background-color: seagreen;
@@ -23,6 +22,38 @@ body {
 }
 #errors ul {
 	list-style-type: disc;
+}
+
+.flash_message {
+	margin: 0 auto;
+	border-radius: 3px;
+	padding: 12px 20px 12px 12px;
+  	
+	margin: 10px;
+}
+.error_message {
+	border: 1px solid rgb(185, 74, 72);
+	color: rgb(185, 74, 72);
+  	background-color: rgb(242, 222, 222);;
+  	background-color: rgba(242, 222, 222, 1);
+}
+.alert_message {
+	border: 1px solid rgb(192, 152, 83);
+	color: rgb(192, 152, 83);
+  	background-color: rgb(252, 248, 227);
+  	background-color: rgba(252, 248, 227, 0.9);
+}
+.success_message {
+	border: 1px solid rgb(70, 136, 71);
+	color: rgb(70, 136, 71);
+  	background-color: rgb(223, 240, 216);
+ 	background-color: rgba(223, 240, 216, 0.9);
+}
+.notice_message {
+	border: 1px solid rgb(58, 135, 173);
+	color: rgb(58, 135, 173);
+ 	background-color: rgb(217, 237, 247);
+  	background-color: rgba(217, 237, 247, 0.9);
 }
 /*****************************
 			Wrapper

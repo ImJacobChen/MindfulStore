@@ -38,13 +38,9 @@ Route::get('search', 'SearchController@search');
 Route::get('account', 'AccountController@index');
 
 //Checkout routes...
-Route::get('checkout/details', 'CheckoutController@index');
-Route::post('checkout/review', 'CheckoutController@review');
-Route::get('checkout/paypalReview', 'CheckoutController@paypalReview');
-Route::get('checkout/confirmation', 'CheckoutController@confirmation');
-
-Route::post('checkout/paypal-checkout', 'CheckoutController@setExpressCheckout');
-Route::post('checkout/place-order', 'CheckoutController@placeOrder');
+Route::get('checkout', 'CheckoutController@index');
+Route::post('checkout/order', 'CheckoutController@order')->name('checkout.order');
+Route::get('checkout/summary/{hash}', 'CheckoutController@summary')->name('checkout.summary');
 
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');
@@ -54,3 +50,6 @@ Route::get('auth/logout', 'Auth\AuthController@getLogout');
 // Registration routes...
 Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
+
+// Braintree
+Route::get('braintree/token', 'BraintreeController@token')->name('braintree.token');

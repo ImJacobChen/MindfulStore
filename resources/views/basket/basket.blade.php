@@ -53,5 +53,5 @@
 			</tr>
 		</table>
 	</div><!-- End #basket -->
-	<a href="{{ url('/checkout/details') }}" class="proceed-to-checkout"><div>Proceed To Checkout -></div></a>
+	<a href="{{ url('/checkout') }}" class="proceed-to-checkout"><div>Proceed To Checkout -></div></a>
 @stop

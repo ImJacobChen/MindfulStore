@@ -38,6 +38,6 @@ class CreateOrderItemsTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('order_items');
     }
 }

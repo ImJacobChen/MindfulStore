@@ -5,8 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/basicStyle.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
-	<!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="{{ asset('css/materialize.min.css') }}"  media="screen,projection"/>
+	
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/normalize.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/skeleton.css') }}">
 	<!--Import Google Icon Font-->
 	<!--link href='https://fonts.googleapis.com/css?family=Quicksand|Material+Icons' rel='stylesheet' type='text/css'-->
 	<script src="{{ asset('js/jquery-2.2.3.min.js') }}"></script>
@@ -41,6 +42,7 @@
 	</div>
 	<!-- END TITLE -->
 
+	<!-- MENU -->
 	<div id="menu">
 		<ul>
 			<a href="{{ url('/') }}"><li>Home</li></a>
@@ -48,7 +50,8 @@
 			<a href="{{ url('/contact') }}"><li>Contact</li></a>
 			<a href="#"><li>About</li></a>
 		</ul>
-	</div><!--End of Menu-->
+	</div>
+	<!--END OF MENU-->
 
 	<div class="search-box">
 		{!! Form::open(['method' => 'GET' ,'action' => 'SearchController@search', 'id' => 'search-form']) !!}
