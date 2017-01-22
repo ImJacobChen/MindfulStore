@@ -65,21 +65,6 @@ body {
 }
 
 /*****************************
-			Header
-******************************/
-#header {
-	height: 80px;
-	width: 100%;
-}
-#header img {
-	width: 100%;
-	height: 100%;
-}
-#header .header-image-large {
-	display: none;
-}
-
-/*****************************
 		User Panel
 ******************************/
 #user-panel {
@@ -120,26 +105,7 @@ body {
 	height: 20px;
 	vertical-align: top;
 }
-#login-panel {
-	width: 100%;
-	border-bottom: 1px solid lightgrey;
-	text-align: center;
-	padding-bottom: 5px;
-	display: none;
-}
-#login-panel form {
-	margin: 0 auto;
-	padding-top: 5px;
-	margin: 3px 0 10px 0;
-}
-#login-panel input {
-	width: 200px;
-	height: 30px;
-	border-radius: 3px;
-	border: 1px solid lightgrey;
-	margin: 1px 0;
-	font-size: 18px;
-}
+
 /*****************************
 		TitleBar
 ******************************/
@@ -148,64 +114,25 @@ body {
 	width: 100%;
 	background-color: #e9eaed;
 	border-bottom: 1px solid lightgrey;
-	display: flex;
+	display: -webkit-box;
+  	display: -webkit-flex;
+ 	display: -ms-flexbox;
+  	display: flex;
+  	align-items: center;
 }
-#titleBar-menuButtonDiv,
-.titleBar-searchButtonDiv,
-.titleBar-title {
-	display: inline-block;
-	vertical-align: middle;
-}
-
 #titleBar .titleBar-title {
 	color: grey;
-	font-size: 28px;
 	text-align: center;
 	flex-grow: 1;
+	margin: 0;
 }
-#titleBar .titleBar-searchButtonDiv,
-#titleBar #titleBar-menuButtonDiv {
-	height: 32.5px;
-	width: 32.5px;
-	margin: 4px 5px;
-}
-#titleBar #titleBar-menuButtonDiv {
-	position: relative;
+#titleBar .titleBar-searchButton,
+#titleBar #titleBar-menuButton {
+	max-height: 32.5px;
+	max-width: 32.5px;
+	cursor: pointer;
 }
 
-/* Menu Button Animation */
-#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
-  bottom: 14px;	
-  cursor: pointer;
-  border-radius: 1px;
-  height: 5px;
-  width: 35px;
-  background: grey;
-  position: absolute;
-  display: block;
-  content: '';
-}
-#nav-toggle span:before {
-  top: -10px;
-}
-#nav-toggle span:after {
-  bottom: -10px; 
-}
-#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
-  transition: all 500ms ease-in-out;
-}
-#nav-toggle.active span {
-  background-color: transparent;
-}
-#nav-toggle.active span:before, #nav-toggle.active span:after {
-  top: 0;
-}
-#nav-toggle.active span:before {
-  transform: rotate(45deg);
-}
-#nav-toggle.active span:after {
-  transform: rotate(-45deg);
-}
 /*****************************
 			Menu
 ******************************/
@@ -309,5 +236,8 @@ body {
 	}
 	#header .header-image-large {
 		display: block;
+	}
+	#titleBar .titleBar-title {
+		font-size: 28px;
 	}
 }

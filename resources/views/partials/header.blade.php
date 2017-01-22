@@ -30,15 +30,11 @@
 	<!-- END USER PANEL -->
 
 	<div id="titleBar">
-		<div class="titleBar-searchButtonDiv">
-			{!! Html::image('img/search.png', 'search icon') !!}
-		</div>
+		{!! Html::image('img/search.png', 'search icon', ['class'=>'titleBar-searchButton']) !!}
 
 		<p class="titleBar-title">The Mindfulness Shop</p>
 
-		<div id="titleBar-menuButtonDiv">
-			<a id="nav-toggle" href="#"><span></span></a>
-		</div>
+		<a id="titleBar-menuButton" href="#">Menu</a>
 	</div>
 	<!-- END TITLE -->
 
@@ -64,38 +60,21 @@
 		/*
 		* Function to toggle the menu and button 'active' class.
 		*/
-		var navButton = document.querySelector( "#nav-toggle" );
-			var menu = document.getElementById('menu');
-		document.getElementById('titleBar-menuButtonDiv').addEventListener('click', function() {
-			if (menu.style.display === 'none') {
+		var menu = document.getElementById('menu');
+		document.getElementById('titleBar-menuButton').addEventListener('click', function() {
+			if (menu.style.display === 'none' || menu.style.display === '') {
 				menu.style.display = 'block';
-				navButton.classList.add( "active" );
 			} else {
 				menu.style.display = 'none';
-				navButton.classList.remove( "active" );
 			}
 		}, false);
-
-		/*
-		* Function to toggle the login panel.
-		*/
-		var loginButton = document.getElementById('login-button');
-		var loginPanel = document.getElementById('login-panel');
-		function loginPanelToggle() {
-			if (loginPanel.style.display === 'none') {
-				loginPanel.style.display = 'block';
-			} else {
-				loginPanel.style.display = 'none';
-			}
-		}
-		loginButton.addEventListener('click', loginPanelToggle, false);
 
 		/*
 		* Function to toggle the search bar
 		*/
 		var searchBar = document.querySelector('.search-box');
-		document.querySelector('.titleBar-searchButtonDiv').addEventListener('click', function() {
-			if (searchBar.style.display === 'none') {
+		document.querySelector('.titleBar-searchButton').addEventListener('click', function() {
+			if (searchBar.style.display === 'none' || searchBar.style.display === '') {
 				searchBar.style.display = 'block';
 			} else {
 				searchBar.style.display = 'none';

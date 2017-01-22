@@ -56,9 +56,5 @@
 			</div>
 		</div><!--End of Product Line-->
 
-		<div class="social-box">
-			<h2>The Mindfullness Social</h2>
-		</div>
-
 	</div><!--End of Wrapper-->
 @stop

@@ -72,6 +72,7 @@ class AuthController extends Controller
      */
     public function authenticated() {
         Auth::user()->syncCarts();
+        return redirect('/');
     }
 
     protected $redirectTo = '/';
