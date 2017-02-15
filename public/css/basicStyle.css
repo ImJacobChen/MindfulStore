@@ -129,10 +129,14 @@ body {
 #titleBar .titleBar-searchButton,
 #titleBar #titleBar-menuButton {
 	max-height: 32.5px;
-	max-width: 32.5px;
+	max-width: 40px;
 	cursor: pointer;
 }
-
+#titleBar #titleBar-menuButton {
+	font-size: 22px;
+	text-decoration: none;
+	color: grey;
+}
 /*****************************
 			Menu
 ******************************/
