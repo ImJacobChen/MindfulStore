@@ -20,7 +20,7 @@
 			<h4>{{ $product->price }}</h4>
 		</div>
 		<div class="product-image">
-			{!! Html::image($product->img, $product->description + 'image') !!}
+			<?php //{!! Html::image($product->img, $product->description + 'image') !!} ?>
 		</div>
 
 		<form id="product-form" action="add-to-basket" method="post">
@@ -51,6 +51,7 @@
 		<div class="description">
 			<p>{{ $product->description }}</p>
 		</div>
+
 		<h3>Delivery</h3>
 		<div class="description">
 			<p>UK Standard: £3.99 or FREE over £60! Delivered within 3-5 days
