@@ -20,7 +20,10 @@
 			<h4>{{ $product->price }}</h4>
 		</div>
 		<div class="product-image">
-			<?php //{!! Html::image($product->img, $product->description + 'image') !!} ?>
+			{{$product->img}}
+			{{$product->description}}
+
+			{!! Html::image($product->img, $product->description + 'image') !!}
 		</div>
 
 		<form id="product-form" action="add-to-basket" method="post">
