@@ -34,7 +34,7 @@
 
 		<p class="titleBar-title">The Mindfulness Shop</p>
 
-		<a id="titleBar-menuButton" href="#">Menu</a>
+		<a id="titleBar-menuButton" href="#">☰</a>
 	</div>
 	<!-- END TITLE -->
 
