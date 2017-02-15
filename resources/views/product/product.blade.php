@@ -20,9 +20,6 @@
 			<h4>{{ $product->price }}</h4>
 		</div>
 		<div class="product-image">
-			{{$product->img}}
-			{{$product->description}}
-
 			<img src="/{{$product->img}}" alt="$product->description">
 		</div>
 
