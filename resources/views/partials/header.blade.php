@@ -3,14 +3,14 @@
 	<title>The Mindfulness Shop</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/basicStyle.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
+	<link rel="stylesheet" type="text/css" href="/css/basicStyle.css">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/normalize.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/skeleton.css') }}">
+	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/css/skeleton.css">
 	<!--Import Google Icon Font-->
 	<!--link href='https://fonts.googleapis.com/css?family=Quicksand|Material+Icons' rel='stylesheet' type='text/css'-->
-	<script src="{{ asset('js/jquery-2.2.3.min.js') }}"></script>
+	<script src="/js/jquery-2.2.3.min.js"></script>
 </head>
 <body>
 	<div id="user-panel">
