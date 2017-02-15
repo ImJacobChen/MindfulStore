@@ -23,7 +23,7 @@
 			{{$product->img}}
 			{{$product->description}}
 
-			{!! Html::image($product->img, $product->description + 'image') !!}
+			<img src="/{{$product->img}}" alt="$product->description">
 		</div>
 
 		<form id="product-form" action="add-to-basket" method="post">
