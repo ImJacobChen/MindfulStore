@@ -3,15 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
-use App\Product;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\User;
+use App\Product;
 use App\CartItem;
+
 use Cart;
 use Auth;
-use App\User;
+
 
 class HomeController extends Controller
 {
