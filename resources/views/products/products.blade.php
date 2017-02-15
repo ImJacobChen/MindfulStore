@@ -54,12 +54,8 @@
 			<li class="list-item"><a href="{{ url('/product', $product->id) }}">
 				{!! Html::image($product->img, $product->name) !!}
 				<span class='item-info'>
-					<span class='item-title'>
-						<p>{{ $product->name }}</p>
-					</span>
-					<span class='item-price'>
-						<p>£ {{ $product->price }}</p>
-					</span>
+					<p class='item-title'>{{ $product->name }}</p>
+					<p class='item-price'>£ {{ $product->price }}</p>
 				</span>
 			</a></li>
 			@endforeach

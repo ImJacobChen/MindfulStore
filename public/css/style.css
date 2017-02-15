@@ -137,17 +137,22 @@
 			Main
 ******************************/
 .main {
-	width: 100%;
+	width: 90%;
+	margin: 0 auto;
 }
 
 .main .sort-buttons {
-	margin-top: 30px;
+	margin: 15px 0;
 	text-align: center;
-	margin-bottom: 3px;
+	display: -webkit-box;
+  	display: -webkit-flex;
+ 	display: -ms-flexbox;
+  	display: flex;
+  	align-items: center;
 }
 .main #refine-button,
 .main .sort-button {
-	width: 48%;
+	flex-grow: 1;
 	height: 50px;
 	display: inline-block;
 	text-align: left;
@@ -258,14 +263,12 @@
 	color: black;
 	text-align: left;
 	margin: 0 auto;
-	width: 100%;
+	width: 80%;
 }
 .main .list-item {
 	list-style: none;
 	width: 100%;
-	display: inline-block;
-	margin-left: 5px;
-	margin-bottom: 20px;
+	margin: 20px 0;
 }
 .main img {
 	width: 100%;
@@ -278,10 +281,10 @@
 	margin: 0 auto;
 }
 .main .item-title {
-	display: block;
+	margin: 0;
 }
 .main .item-price {
-	display: block;
+	margin: 0;
 	color: grey;
 }
 /*****************************
@@ -298,6 +301,7 @@
 #product-wrapper {
 	width: 95%;
 	margin: 0 auto;
+	padding: 10px 0;
 }
 .name-and-price {
 	width: 100%;
@@ -308,15 +312,22 @@
 }
 .product-image img {
 	width: 100%;
+	max-width: 550px;
 }
 #product-form {
 	text-align: center;
-
 	margin: 0 auto;
 }
+.attribute-boxes {
+	display: -webkit-box;
+  	display: -webkit-flex;
+ 	display: -ms-flexbox;
+  	display: flex;
+  	width: 100%;
+}
 .attribute-box {
+	flex-grow: 1;
 	height: 40px;
-	width: 48.4%;
 	line-height: 40px;
 	text-align: left;
 	display: inline-block;

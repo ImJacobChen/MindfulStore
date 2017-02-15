@@ -12,8 +12,7 @@
 		@endif
 
 		<a href="{{ url('products') }}" class="back-to-products">
-			{!! Html::image('img/circle-arrow-back.png', 'Back arrow icon') !!}
-			<p>Back to products</p>
+			<p>← Back to products</p>
 		</a>
 		<div class="name-and-price">
 			<h3>{{ $product->name }}</h3>
@@ -24,19 +23,22 @@
 		</div>
 
 		<form id="product-form" action="add-to-basket" method="post">
-			<div class="attribute-box attribute-box-left">Quantity: <select name="quantity" class="product-quantity form-field">
-				<option value="1">1</option>
-				<option value="2">2</option>
-				<option value="3">3</option>
-				<option value="4">4</option>
-				<option value="5">5</option>
-				<option value="6">6</option>
-				<option value="7">7</option>
-				<option value="8">8</option>
-				<option value="9">9</option>
-				<option value="10">10</option>
-			</select></div>
-			<div class="attribute-box attribute-box-right"></div>
+			<div class="attribute-boxes">
+				<div class="attribute-box attribute-box-left">Quantity: <select name="quantity" class="product-quantity form-field">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</select></div>
+
+				<div class="attribute-box attribute-box-right"></div>
+			</div>
 			
 			<input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
 			{!! Form::hidden('product_id', $product->id, null, ['class' => 'form-field']) !!}
