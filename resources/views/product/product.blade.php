@@ -7,7 +7,7 @@
 				<h3 id="added-to-basket-alert">
 					{{ Session::get('added_to_basket') }}
 				</h3>
-				<a class="proceed-to-basket" href="{{ url('/') }}">Proceed to Basket?</a>
+				<a class="proceed-to-basket" href="{{ url('/basket') }}">Proceed to Basket?</a>
 			</div>
 		@endif
 
