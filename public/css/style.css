@@ -134,103 +134,105 @@
 						PRODUCTS
 ************************************************************/
 /*****************************
-			Main
+	 Products Container
 ******************************/
-.main {
+.products__container {
 	width: 90%;
 	margin: 0 auto;
 }
 
-.main .sort-buttons {
-	margin: 15px 0;
-	text-align: center;
-	display: -webkit-box;
-  	display: -webkit-flex;
- 	display: -ms-flexbox;
-  	display: flex;
-  	align-items: center;
+/*****************************
+	     Refine
+******************************/
+/**	Refine Buttons **/
+.refine_buttons {
+	width: 100%;
 }
-.main #refine-button,
-.main .sort-button {
-	flex-grow: 1;
+.refine_buttons__refine_button,
+.refine_buttons__sort_button {
 	height: 50px;
+	width: 50%;
 	display: inline-block;
 	text-align: left;
+	float: left;
 	line-height: 50px;
 	color: white;
 }
-.main #refine-button p, 
-.main .sort-button p {
+.refine_buttons__refine_button p, 
+.refine_buttons__sort_button p {
 	margin-left: 4px;
 	font-size: 18px;
 	display: inline-block;
 }
-.main #refine-button {
+.refine_buttons__refine_button {
 	background-color: seagreen;
 }
-.main #refine-button img {
+.refine_buttons__refine_button img {
 	display: inline-block;
 	height: 11px;
 	width: 11px;
 	margin-left: 8px;
 	transition: 0.5s;
 }
-.main .sort-button {
+.refine_buttons__sort_button {
 	background-color: coral;
 }
-.main .sort-button form {
+.refine_buttons__sort_button form {
 	display: inline-block;
 	border: none;
 	width: 45%;
 	color: white;
 }
-.main .sort-button select {
+.refine_buttons__sort_button select {
 	background-color: coral;
 	border: none;
 	width: 100%;
 	height: 90%;
 	color: white;
 }
-.main #refine-items {
+
+/**	Refine Options **/
+
+.refine_options {
 	display: none;
 }
-.main #refine-items h3 {
+.refine_options h3 {
 	padding-left: 3px;
 	background-color: lightgrey;
 	padding: 5px 0;
 }
-.main #price-form {
+.refine_options__price_form {
 	margin: 5px 0;
 }
-.main #price-form:first-child {
+.refine_options__price_form:first-child {
 	border-bottom: 1px solid lightgrey;
 }
-.main #price-form div {
+.refine_options__price_form div {
 	display: inline-block;
 	width: 45%;
 	vertical-align: top;
 }
-.main #price-form input {
+.refine_options__price_form input {
 	height: 30px;
 	vertical-align: middle;
 }
-.main #min-price,
-.main #max-price {
+.refine_options__price_form #min-price,
+.refine_options__price_form #max-price {
 	width: 50px;
 	margin-bottom: 5px;
 }
-.main #min-price-range,
-.main #max-price-range {
+.refine_options__price_form #min-price-range,
+.refine_options__price_form #max-price-range {
 	width: 100%;
 }
-.main #price-form p {
+.refine_options__price_form p {
 	color: red;
 }
-.main #refine-type-list {
+.products__container #refine-type-list {
 	margin: 0 auto;
 	width: 100%;
 }
-.main #refine-type-item {
+.products__container #refine-type-item {
 	width: 100%;
 	height: 40px;
 	border-bottom: 1px solid grey;
@@ -238,7 +240,7 @@
 	line-height: 40px;
 	list-style: none;
 }
-.main .refine-submit {
+.products__container .refine-submit {
 	display: block;
 	margin: 10px auto 0 auto;
 	background-color: seagreen;
@@ -249,41 +251,44 @@
 	color: white;
 	border: none;
 }
-.main .selected {
+.products__container .selected {
 	background-color: seagreen;
 	color: white;
 }
 
-.main #list {
+/*****************************
+	     product_list
+******************************/
+.product_list {
 	text-align: center;
 	width: 100%;
 }
-.main #list a {
+
+.product_list__item {
+	list-style: none;
+	width: 60%;
+	margin: 20px 0;
+}
+.product_list__item a {
 	text-decoration: none;
 	color: black;
 	text-align: left;
 	margin: 0 auto;
 	width: 80%;
 }
-.main .list-item {
-	list-style: none;
+.product_list__item img {
 	width: 100%;
-	margin: 20px 0;
 }
-.main img {
-	width: 100%;
-	margin-bottom: 1px;
-}
-.main .item-info {
+.product_list__item__info {
 	display: block;
 	height: 40px;
 	width: 100%;
 	margin: 0 auto;
 }
-.main .item-title {
+.product_list__item__info_title {
 	margin: 0;
 }
-.main .item-price {
+.product_list__item__info_price {
 	margin: 0;
 	color: grey;
 }
@@ -298,11 +303,6 @@
 /************************************************************
 						PRODUCT
 ************************************************************/
-#product-wrapper {
-	width: 95%;
-	margin: 0 auto;
-	padding: 10px 0;
-}
 .name-and-price {
 	width: 100%;
 	padding: 3px 0 3px 0;
@@ -314,80 +314,40 @@
 	width: 100%;
 	max-width: 550px;
 }
-#product-form {
-	text-align: center;
-	margin: 0 auto;
+
+.description {
+	padding: 3px 0 3px 5px;
 }
-.attribute-boxes {
-	display: -webkit-box;
-  	display: -webkit-flex;
- 	display: -ms-flexbox;
-  	display: flex;
-  	width: 100%;
-}
-.attribute-box {
-	flex-grow: 1;
-	height: 40px;
-	line-height: 40px;
-	text-align: left;
-	display: inline-block;
-	vertical-align: middle;
-	margin: 6px 0 3px 0;
-	padding-left: 3px;
-}
-.attribute-box-left {
-	background-color: lightgrey;
-}
-.attribute-box-right {
-	background-color: lightblue;
-}
-.product-quantity {
-	background-color: lightgrey;
-	border: none;
-}
-#add-to-basket {
-	width: 100%;
-	background-color: seagreen;
-	text-align: center;
-	line-height: 45px;
-	color: white;
-	border: none;
-	margin: 3px 0 6px 0;
-	font-weight: bold;
-}
-#accordion h3 {
+.description h3 {
 	width: 100%;
 	height: 50px;
 	background-color: lightgrey;
-	border-top: 1px solid grey;
-	line-height: 50px;
 	padding-left: 10px;
 }
-#accordion .description {
-	padding: 3px 0 3px 5px;
-}
-.back-to-products {
-	margin-bottom: 5px;
-	margin-top: 5px;
+.back_to_products {
+	height: 20px;
+	width: 100%;
+	margin: 10px 0;
 	text-decoration: none;
 	color: black;
 }
-.back-to-products img,
-.back-to-products p {
-	display: inline-block;
-	vertical-align: top;
+
+#add_to_basket {
+	display: block;
+	width: 100%;
 }
-#added-to-basket {
+
+.added_to_basket {
 	border: 2px solid lightgrey;
 	border-radius: 5px;
 	margin: 5px auto;
 	padding: 0 3px;
 	text-align: center;
 }
-#added-to-basket-alert {
+.added_to_basket__title {
 	margin: 0 0 10px 0;
 }
-.proceed-to-basket {
+.added_to_basket__button {
 	width: 100%;
 	display: inline-block;
 	padding: 3px 0;
@@ -396,12 +356,6 @@
 	color: white;
 	font-weight: bold;
 	border-radius: 3px;
-}
-.continue-shopping {
-	background-color: coral;
-}
-.proceed-to-basket {
-	background-color: seagreen;
 }
 /************************************************************
 						CONTACT

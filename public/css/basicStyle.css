@@ -227,6 +227,7 @@ body {
 	border-top: 3px solid lightgrey;
 }
 #footer p {
+	margin: 0;
 	position: absolute;
 	bottom: 0;
 	right: 0;

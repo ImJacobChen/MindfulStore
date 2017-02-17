@@ -2,67 +2,69 @@
 	
 @section('content')
 
-<div class="main">
-		<div class="sort-buttons">
-			<div id="refine-button">
-				<p>Refine Items</p>
-				{!! Html::image('img/arrow-down.png', 'arrow down icon') !!}
-			</div>
-			<div class="sort-button">
-				<p>Sort by:</p>
-				<form>
-					<select id="sort-by">
-						<option>-</option>
-						<option value="price-low-to-high">Price: Low to High</option>
-						<option value="price-high-to-low">Price: High to Low</option>
-						<option value="newest-items-first">Newest Items first</option>
-						<option value="oldest-items-first">Oldest Items first</option>
-					</select>
-				</form>
-			</div>
-		</div>
+<div class="products__container container">
 
-		<div id="refine-items">
-			<h3>Price</h3>
-			<form id="price-form" align="center">
-				<div id="min-price-div">
-					Min: £ <input id="min-price" type="text" value=""><br>
-							<input type="range" id="min-price-range" min="0" max="100" step="1">
-				</div>
-				<div id="max-price-div">
-					Max: £ <input id="max-price" type="text" value=""><br>
-							<input type="range" id="max-price-range" min="0" max="100" step="1">
-				</div> 
+	<div class="refine_buttons">
+		<div class="refine_buttons__refine_button">
+			<p>Refine Items</p>
+			<img src="/img/arrow-down.png" alt="arrow icon">
+		</div>
+		<div class="refine_buttons__sort_button">
+			<p>Sort by:</p>
+			<form>
+				<select id="sort-by">
+					<option>-</option>
+					<option value="price-low-to-high">Price: Low to High</option>
+					<option value="price-high-to-low">Price: High to Low</option>
+					<option value="newest-items-first">Newest Items first</option>
+					<option value="oldest-items-first">Oldest Items first</option>
+				</select>
 			</form>
-
-
-			<h3>Type</h3>
-			<div>
-				<ul id='refine-type-list'>
-					<li id='refine-type-item'>Ornament</li>
-					<li id='refine-type-item'>Artwork</li>
-					<li id='refine-type-item'>Stickers</li>
-					<li id='refine-type-item'>Decal</li>
-				</ul>
-			</div>
-			{!! Form::submit('Refine+', ['class' => 'refine-submit']) !!}
-			<!--input type="button" class="refine-submit" value="Refine+" onclick="refineResults()"-->
 		</div>
-
-		<ul id="list">
-			@foreach($products as $product)
-			<li class="list-item"><a href="{{ url('/product', $product->id) }}">
-				{!! Html::image($product->img, $product->name) !!}
-				<span class='item-info'>
-					<p class='item-title'>{{ $product->name }}</p>
-					<p class='item-price'>£ {{ $product->price }}</p>
-				</span>
-			</a></li>
-			@endforeach
-		</ul><!--End of List-->
 	</div>
 
-</div><!--End of Wrapper-->
+	<div class="refine_options">
+		<h3>Price</h3>
+		<form class="refine_options__price_form" align="center">
+			<div id="min-price-div">
+				Min: £ <input id="min-price" type="text" value=""><br>
+						<input type="range" id="min-price-range" min="0" max="100" step="1">
+			</div>
+			<div id="max-price-div">
+				Max: £ <input id="max-price" type="text" value=""><br>
+						<input type="range" id="max-price-range" min="0" max="100" step="1">
+			</div> 
+		</form>
+
+
+		<h3>Type</h3>
+		<div>
+			<ul id='refine-type-list'>
+				<li id='refine-type-item'>Ornament</li>
+				<li id='refine-type-item'>Artwork</li>
+				<li id='refine-type-item'>Stickers</li>
+				<li id='refine-type-item'>Decal</li>
+			</ul>
+		</div>
+		{!! Form::submit('Refine+', ['class' => 'refine-submit']) !!}
+		<!--input type="button" class="refine-submit" value="Refine+" onclick="refineResults()"-->
+	</div>
+
+	<ul class="product_list">
+		@foreach($products as $product)
+		<li class="product_list__item">
+			<a href="{{ url('/product', $product->id) }}">
+				{!! Html::image($product->img, $product->name) !!}
+				<span class='product_list__item__info'>
+					<p class='product_list__item__info_title'>{{ $product->name }}</p>
+					<p class='product_list__item__info_price'>£ {{ $product->price }}</p>
+				</span>
+			</a>
+		</li>
+		@endforeach
+	</ul><!--End of List-->
+
+</div><!-- End Container -->
 
 
 
@@ -110,8 +112,8 @@
 	/*
 	* The following code will allow the refine items section to toggle
 	*/
-	var refineItemsButton = document.getElementById('refine-button');
-	var refineItemsPanel = document.getElementById('refine-items');
+	var refineItemsButton = document.querySelector('.refine_buttons__refine_button');
+	var refineItemsPanel = document.querySelector('.refine_options');
 	var refineButtonArrow = refineItemsButton.querySelector('img');
 	function toggleRefineItemsPanel() {
 		if (refineItemsPanel.style.display === 'none') {
