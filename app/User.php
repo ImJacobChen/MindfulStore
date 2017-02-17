@@ -64,6 +64,7 @@ class User extends Model implements AuthenticatableContract,
     public function syncCarts()
     {   
         $userId = Auth::user()->id;
+
         /**
          * Array of product_id's of the items stored in the session cart
          * 
@@ -84,6 +85,7 @@ class User extends Model implements AuthenticatableContract,
          * @var array
          */
         $sessionAndDatabaseItems = array_intersect($databaseItems, $sessionItems);
+
         /**
          * Loop through each of the intersecting database and session items 
          * and update the database product quantity(s) with 
@@ -102,6 +104,7 @@ class User extends Model implements AuthenticatableContract,
          * @var array
          */
         $justDatabaseItems = array_diff($databaseItems, $sessionItems);
+
         //If item is in DB and NOT in SESSION, add to session basket
         //-Add to session basket with 'From your last session' option
         /**
@@ -126,13 +129,13 @@ class User extends Model implements AuthenticatableContract,
             ));
         }
         
-        
         /**
          * Product IDs of items only in the session cart
          * 
          * @var array
          */
         $justSessionItems = array_diff($sessionItems, $databaseItems);
+
         /**
          * Loop through the items only in the session cart and
          * add them to the database cart.
